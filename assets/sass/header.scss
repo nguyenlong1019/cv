@@ -1,0 +1,50 @@
+body {
+    background: $bgColor;
+    color: $textColor;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 22px 16%;
+    border-bottom: 1px solid transparent;
+    transition: $transition;
+    .logo img {
+        width: 135px;
+        height: auto;
+    }
+    #menu-icon {
+        font-size: 36px;
+        color: $textColor;
+        z-index: 1001;
+        cursor: pointer;
+        display: none;
+    }
+    .navbar {
+        &-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &-link {
+            color: $secondColor;
+            font-size: $pFont;
+            font-weight: 600;
+            padding: 10px 25px;
+            margin: 0 2px;
+            border-radius: 0.5rem;
+            transition: $transition;
+        }
+        &-link:hover {
+            color: $textColor;
+            background-color: $mainColor;
+        }
+    }
+}
