@@ -1,3 +1,15 @@
+:root {
+  --bg-color: #020312;
+  --text-color: #fff;
+  --main-color: #eb4a4a;
+  --second-color: gray;
+  --sp-color: #12141c;
+  --h1-font: 8.3rem;  
+  --h2-font: 5.6rem;
+  --p-font: 1.8rem;
+  --transition: all .40s ease;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,8 +34,26 @@ a {
 }
 
 body {
-  background: #020312;
-  color: #fff;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 40px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  border: 1px solid var(--main-color);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  transform: scale(1.01) translateY(-5px);
+  background: transparent;
+  border: 1px solid var(--main-color);
 }
 
 header {
@@ -38,7 +68,7 @@ header {
   background: transparent;
   padding: 22px 16%;
   border-bottom: 1px solid transparent;
-  transition: all 0.4s ease;
+  transition: var(--transition);
 }
 header .logo img {
   width: 135px;
@@ -46,7 +76,7 @@ header .logo img {
 }
 header #menu-icon {
   font-size: 36px;
-  color: #fff;
+  color: var(--text-color);
   z-index: 1001;
   cursor: pointer;
   display: none;
@@ -57,17 +87,113 @@ header .navbar-list {
   justify-content: space-between;
 }
 header .navbar-link {
-  color: gray;
-  font-size: 1.6rem;
+  color: var(--second-color);
+  font-size: var(--p-font);
   font-weight: 600;
   padding: 10px 25px;
   margin: 0 2px;
   border-radius: 0.5rem;
-  transition: all 0.4s ease;
+  transition: var(--transition);
 }
 header .navbar-link:hover {
-  color: #fff;
-  background-color: #eb4a4a;
+  color: var(--text-color);
+  background-color: var(--main-color);
 }
 
-/*# sourceMappingURL=main.css.map */
+header.sticky {
+  padding: 10px 16%;
+  background: var(--bg-color);
+  border-bottom: 1px solid #0e1630;
+}
+
+.container {
+  padding: 0 16%;
+}
+
+.home {
+  margin-top: 180px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.home-text {
+  width: 500px;
+}
+
+.home-sub-heading {
+  font-size: 24px;
+  color: var(--main-color);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.home-heading {
+  font-size: var(--h1-font);
+  color: var(--text-color);
+  font-weight: bold;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  margin: 20px 0;
+}
+
+.home-heading span {
+  color: var(--main-color);
+}
+
+.home-img img {
+  color: var(--main-color);
+}
+
+.home-text h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 48px;
+}
+
+/* Clock */
+.section-clock {
+  margin-top: 48px;
+}
+.section-clock h2 {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: 4px;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 8px;
+}
+.clock-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clock {
+  display: flex;
+  margin: auto;
+}
+.clock div {
+  margin: 5px;
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.clock span {
+  width: 100px;
+  height: 80px;
+  background: slateblue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.clock .clock-text {
+  height: 30px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: darkblue;
+  opacity: 0.8;
+}
